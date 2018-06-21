@@ -1,0 +1,13 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.n.a</groupId>
+    <artifactId>puzzles</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modules>
+        <module>morse</module>
+    </modules>
+
+</project>
