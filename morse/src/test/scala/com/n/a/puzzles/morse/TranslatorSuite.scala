@@ -24,4 +24,24 @@ class TranslatorSuite extends FunSuite with BeforeAndAfter {
   test("code returns 'nopqrstuvwxyz' result") {
     assert(translator.code("nopqrstuvwxyz") == "-. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..")
   }
+
+  test("decode returns empty") {
+    assert(translator.decode("") == "")
+  }
+
+  test("decode returns empty (null)") {
+    assert(translator.decode(null) == "")
+  }
+
+  test("decode returns 'sos'") {
+    assert(translator.decode("... --- ...") == "sos")
+  }
+
+  test("decode returns 'abcdefghijklm'") {
+    assert(translator.decode(".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. --") == "abcdefghijklm")
+  }
+
+  test("decode returns 'nopqrstuvwxyz' result") {
+    assert(translator.decode("-. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..") == "nopqrstuvwxyz")
+  }
 }
